@@ -34,4 +34,4 @@ defaults:
       type: "posts"
     values:
       is_post: true
-theme: jekyll-theme-cayman
+theme: jekyll-theme-architect
