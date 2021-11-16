@@ -35,7 +35,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.9/community' >> /etc/apk/repos
 RUN apk add mongodb-tools
 
 
-mongoimport --db admin --authenticationDatabase admin --username user --password pass --file /mongo/yad2_lead_fields.json --collection admin --host host --ssl --sslCAFile rds-combined-ca-bundle.pem --sslAllowInvalidCertificates
+mongoimport --db admin --authenticationDatabase admin --username user --password pass --file /mongo/lead_fields.json --collection admin --host host --ssl --sslCAFile rds-combined-ca-bundle.pem --sslAllowInvalidCertificates
 
 
 
