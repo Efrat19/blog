@@ -44,3 +44,39 @@ kubernetes ecosystem
 - externaksecrets
 - externalDNS
 - kubejanitor
+
+
+### dataops
+- databricks CLI CI
+```
+jobs:
+  update-databricks-dev:
+    docker:
+      - image: 'efrat19/databricks-client'
+    steps:
+      - run:
+          name: update repos
+          command: |
+            export DATABRICKS_HOST=$DATABRICKS_DEV_HOST
+            export DATABRICKS_TOKEN=$DATABRICKS_DEV_TOKEN
+            for r in $(databricks repos list | jq -r '.repos[].id');
+            do 
+              databricks repos update --repo-id=$r --branch=${CIRCLE_BRANCH};
+            done
+```
+- deploying flink against kafka
+- deploy mwaa + CI + eks scheduling
+- testing kafka config docker run -it edenhill/kcat:1.7.0 -b <kafka-host>:<kafka-port> -L    
+- deploying vvp flink the gitops way
+    - install cert manager https://cert-manager.io/docs/installation/
+
+
+
+Posts:
+Scheduling AWS Managed Airflow DAGs on EKS
+    part 1 - Creating the MWAA Env + CI
+    part 2 - Enabling EKS scheduling
+Storing Prometheus Metrics on S3 with Thanos
+Running Flink on EKS with GitOps
+DataBricks Notebooks CI
+
