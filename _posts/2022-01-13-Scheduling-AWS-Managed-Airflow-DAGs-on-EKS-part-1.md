@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scheduling AWS Managed Airflow DAGs on EKS
+title: Scheduling AWS Managed Airflow DAGs on EKS - Part 1
 lang: en
 categories:
     - Kubernetes
@@ -92,7 +92,7 @@ resource "aws_s3_bucket_public_access_block" "mwaa_bucket_public_access_block" {
 for this first try you can upload some example DAGs from this [repo](https://github.com/Efrat19/mwaa_source_example):
 ```bash
 git clone https://github.com/Efrat19/mwaa_source_example
-aws s3 cp mwaa_source_example s3:///my-mwaa-source --recursive
+aws s3 cp mwaa_source_example s3://my-mwaa-source/mwaa_source_example --recursive --exclude "*.git/*"
 ```
 
 ## Creating IAM Resources
@@ -270,7 +270,17 @@ resource "aws_mwaa_environment" "mwaa" {
     }
   }
 }
+# For fine tuning, you will find many more configuration options here https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/mwaa_environment
+
 ```
+Complete TF source can be found [here](https://github.com/Efrat19/mwaa_source_example/blob/main/mwaa.tf)
 
 # Final:
-Once you `plan` and `apply` all the resources (it takes a few minutes to deploy the environment), head to Managed Apache Airflow service in AWS console, you will see your env there, click the `open Airflow UI` link to get to Ariflow console, you will see the dags there:
+Once you `plan` and `apply` all the resources (it takes a few minutes to deploy the environment), head to Managed Apache Airflow service in AWS console, you will see your env there
+<img src="{{"/assets/img/airflow-mwaa.png" | relative_url }}">
+
+click the `open Airflow UI` link to get to Ariflow console, you will see the dags there:
+
+<img src="{{"/assets/img/airflow-ui.png" | relative_url }}">
+<img src="{{"/assets/img/dags.png" | relative_url }}">
+<img src="{{"/assets/img/tutorial-dag.png" | relative_url }}">
