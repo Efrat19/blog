@@ -137,7 +137,7 @@ aws s3 cp kube_config.yaml s3://my-mwaa-source/mwaa_source_example/dags
 You will be adding this config file path to DAGs using `KubernetesPodOperator`. [view example](https://github.com/Efrat19/mwaa_source_example/blob/4239387d5a7e1d4722004e2faf78e6d87d167227/dags/eks_scheduling.py#L43)
 
 # All Done!
-head over to MWAA Airflow UI, enable and trigger the `kubernetes_pod_example` DAG. Once the DAG is started, inspect the created pod:
+Head over to MWAA Airflow UI, enable and trigger the `kubernetes_pod_example` DAG. Once the DAG is started, inspect the created pod:
 
 ```bash
 kubectl get po -n default -w
