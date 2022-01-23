@@ -22,10 +22,10 @@ If you completed [**part 1**](https://efrat19.github.io/blog/aws-managed-airflow
 
 In Airflow we often use `KubernetesPodOperator` DAG class. Airflow contacts k8s API-server and asks it to spawn a pod to perform the task. In this part of the tutorial you will connect MWAA to an EKS cluster on the same VPC, and schedule an example pod on top of it.
 
-# Pre-Request
+## Pre-Requests:
 You need an EKS cluster. if you are familiar with terraform, you can do it in one click using [my EKS module](https://github.com/Efrat19/terraform-eks-with-gitops)
 
-# IAM Considerations:
+## IAM Considerations:
 We will add another permission to the MWAA execution role from part 1.
 
 
@@ -68,7 +68,7 @@ resource "aws_iam_role" "mwaa_role" {
 ```
 Complete TF source can be found [here](https://github.com/Efrat19/mwaa_source_example/blob/main/mwaa.tf)
 
-# EKS Considerations:
+## EKS Considerations:
 MWAA is outside the cluster scope. In order for managed Airflow to reach out for the API service, it will need an entry in the `aws-auth` configmap in the `kube-system` namespace. we are basically registering the MWAA execution role as a k8s user:
 ```yaml
     userarn  = "arn:aws:iam::<account_id>:role/airflow-mwaa-role"
@@ -121,7 +121,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-# Final Step - Kubeconfig:
+## Final Step - Kubeconfig:
 Now the last task is to give MWAA a kubeconfig to use. generate one with:
 ```bash
 aws eks update-kubeconfig \
@@ -136,7 +136,7 @@ aws s3 cp kube_config.yaml s3://my-mwaa-source/mwaa_source_example/dags
 ```
 You will be adding this config file path to DAGs using `KubernetesPodOperator`. [view example](https://github.com/Efrat19/mwaa_source_example/blob/4239387d5a7e1d4722004e2faf78e6d87d167227/dags/eks_scheduling.py#L43)
 
-# All Done!
+## All Done!
 Head over to MWAA Airflow UI, enable and trigger the `kubernetes_pod_example` DAG. Once the DAG is started, inspect the created pod:
 
 ```bash

@@ -74,7 +74,7 @@ resource "aws_security_group" "mwaa_sg" {
   }
 }
 ```
-# Creating an S3 bucket for the DAGs
+## Creating an S3 bucket for the DAGs
 ```terraform
 resource "aws_s3_bucket" "mwaa_source_bucket" {
   bucket = "my-mwaa-source"
@@ -227,7 +227,7 @@ POLICY
 }
 ```
 
-# Final Step - Creating the MWAA Env
+## Final Step - Creating the MWAA Env
 
 ```terraform 
 resource "aws_mwaa_environment" "mwaa" {
@@ -275,7 +275,7 @@ resource "aws_mwaa_environment" "mwaa" {
 ```
 Complete TF source can be found [here](https://github.com/Efrat19/mwaa_source_example/blob/main/mwaa.tf)
 
-# Final:
+## All Done!
 Once you `plan` and `apply` all the resources (it takes a few minutes to deploy the environment), head to Managed Apache Airflow service in AWS console, you will see your env there
 <img src="{{"/assets/img/airflow-mwaa.png" | relative_url }}">
 
