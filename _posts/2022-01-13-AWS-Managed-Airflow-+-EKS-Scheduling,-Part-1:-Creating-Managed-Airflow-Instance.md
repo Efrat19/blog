@@ -285,4 +285,4 @@ click the `open Airflow UI` link to get to Ariflow console, you will see the dag
 <img src="{{"/assets/img/dags.png" | relative_url }}">
 <img src="{{"/assets/img/tutorial-dag.png" | relative_url }}">
 
-Good job! you are ready to move to the next part - [adding EKS scheduling](https://efrat19.github.io/blog/aws-managed-airflow-with-eks-scheduling-part-2-scheduling-dags-on-eks)
+Good job! you are ready to move to the next part - [adding EKS scheduling](https://efrat19.github.io/blog/aws-managed-airflow-+-eks-scheduling-part-2-scheduling-dags-on-eks)
