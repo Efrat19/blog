@@ -18,7 +18,7 @@ image:
  height: 630
 ---
 Apache Airflow by Airbnb has been around for a while, and though newer scheduling engines are available nowadays, it is still popular among data scientists and being used in many companies.
-Airflow and its stateful components are not cloud native out of the box, but thankfully last November AWS introduced *Amazon Managed Workflows for Apache Airflow*, AKA *MWAA*, eliminating the pain of managing a self hosted Airflow.
+Airflow and its stateful components are not cloud native out of the box, but thankfully last November AWS introduced **Amazon Managed Workflows for Apache Airflow**, AKA **MWAA**, eliminating the pain of managing a self hosted Airflow.
 
 <img src="https://res.feednews.com/assets/v2/2759dac720f085357df31820a0443b27?width=1280&height=720&quality=hq&category=us_Digital_Technology"  height="30">
 
