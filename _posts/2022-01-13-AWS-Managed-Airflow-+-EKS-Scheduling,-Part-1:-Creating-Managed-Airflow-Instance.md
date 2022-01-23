@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AWS Managed Airflow with EKS Scheduling, Part 1: Creating Managed Airflow Instance"
+title: "AWS Managed Airflow + EKS Scheduling, Part 1: Creating Managed Airflow Instance"
 lang: en
 categories:
     - Kubernetes
