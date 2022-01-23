@@ -146,3 +146,4 @@ you will see the pod being spawned by airflow.
 
 <img src="{{"/assets/img/scheduled-pod.png" | relative_url }}">
 
+it didn't work? [troubleshoot](https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-eks-example.html)
