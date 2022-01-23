@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Scheduling AWS Managed Airflow DAGs on EKS, Part 1: Enabling EKS scheduling"
+title: "AWS Managed Airflow with EKS Scheduling, Part 2: Scheduling DAGs on EKS"
 lang: en
 categories:
     - Kubernetes

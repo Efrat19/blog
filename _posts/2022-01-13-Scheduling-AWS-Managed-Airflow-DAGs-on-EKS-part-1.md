@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Scheduling AWS Managed Airflow DAGs on EKS, Part 1: Creating the MWAA Env"
+title: "AWS Managed Airflow with EKS Scheduling, Part 1: Creating Managed Airflow Instance"
 lang: en
 categories:
     - Kubernetes
