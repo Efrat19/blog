@@ -76,7 +76,7 @@ MWAA is outside the cluster scope. In order for managed Airflow to reach out for
     groups   = ["system:masters"]
 ```
 
-also you will need to `kubectl apply` the RBA Role and RoleBinding:
+also you will need to `kubectl apply` the RBAC Role and RoleBinding:
 ```yaml
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1beta1
