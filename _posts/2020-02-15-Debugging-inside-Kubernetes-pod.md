@@ -4,10 +4,7 @@ title: Debugging inside Kubernetes pod
 lang: en
 categories:
     - Kubernetes
-    - PHP
-    - Xdebug
     - VScode
-    - ngrok
 # tags:
 #     - hoge
 #     - foo
