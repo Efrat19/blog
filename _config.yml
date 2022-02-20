@@ -34,4 +34,4 @@ defaults:
       type: "posts"
     values:
       is_post: true
-theme: jekyll-theme-architect
+theme: jekyll-theme-modernist
