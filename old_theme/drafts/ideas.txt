@@ -80,3 +80,14 @@ Storing Prometheus Metrics on S3 with Thanos
 Running Flink on EKS with GitOps
 DataBricks Notebooks CI
 
+
+
+SRE, DevOps and DataOps
+- Deployments revealed
+- NAT cost saving initiatives for 2023
+  - alterNAT
+  - per az NAT
+  - Egress-only gateway
+- flink + kraft
+- Scaling with headroom
+- gem install bundler -v 1.16.1
