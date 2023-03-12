@@ -1,1 +1,0 @@
-https://operatorhub.io/operator/awss3-operator-registry

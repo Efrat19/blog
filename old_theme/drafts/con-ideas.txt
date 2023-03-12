@@ -1,5 +1,0 @@
-- hpa to cluster autoscaler
-- flux
-- federation
-- helmfile
-- traefik and maesh

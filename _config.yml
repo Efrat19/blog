@@ -1,21 +1,28 @@
-title: Jekyll Serial Programmer
+title: Efrat Levitan
 markdown: kramdown
+google_analytics: UA-160733621-1
 
 # for atom feed
 author:
-  name: Sharad Raj Singh Maurya
-  email: dev_sharad@outlook.com
+  name: Efrat Levitan
+  email: efrat890089gmail.com
 
 plugins:
   - jemoji
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-feed
+  - jekyll-paginate
+  # - jekyll-feed
+  # - jemoji
+  - jekyll-twitter-plugin
 
 collections_dir: all_collections
 collections:
   posts:
     output: true
+
+paginate: 7
+paginate_path: /posts/page:num
 
 defaults:
   - scope:
@@ -24,3 +31,4 @@ defaults:
       layout: "post"
       permalink: /posts/:title/
 exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md"]
+

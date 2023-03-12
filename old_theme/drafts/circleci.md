@@ -1,1 +1,0 @@
-Securing your CI with CircleCI Security Conetxt
