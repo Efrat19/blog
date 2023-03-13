@@ -2,7 +2,8 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <main>
+    <main>    
+      
       {% include header.html %} {% include bio.html %}
       <section class="articles">
         {% for post in site.posts %}
@@ -13,7 +14,8 @@
           <small class="date">{{post.date | date_to_string}}</small>
           <div class="categories">
             {% for c in post.categories %}
-            <a href="#!" data-base-url="{{site.baseurl}}" class="category"
+
+            <a href="{{ "/categories/" | relative_url }}#{{ c }}" data-base-url="{{site.baseurl}}" class="category"
               >{{c}}</a
             >
             {% endfor %}
@@ -25,5 +27,6 @@
       {% include footer.html %}
     </main>
     {% include category-modal.html%}
+    {% include google-analytics.html %}
   </body>
 </html>

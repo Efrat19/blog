@@ -108,6 +108,7 @@ main {
 .articles .article .date {
   display: block;
   font-size: 0.8rem;
+  color: magenta;
 }
 .articles .article .categories {
   display: flex;
@@ -175,4 +176,34 @@ main {
   .articles .article .article-title a {
     font-size: 1rem;
   }
+}
+
+.sidebar .side-content {
+  padding: 2rem;
+  background: var(--gray-3);
+  border-radius: 15px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.sidebar .side-content .categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.sidebar .side-content .categories .category {
+  margin: 0 0.5rem 0.3rem 0;
+  display: block;
+  color: var(--gray-4);
+  background: var(--white-2);
+  border-radius: 15px;
+  font-size: 0.7rem;
+  padding: 0 0.8rem;
+  line-height: 1.3rem;
+  cursor: pointer;
 }

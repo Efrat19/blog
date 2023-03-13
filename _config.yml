@@ -21,14 +21,14 @@ collections:
   posts:
     output: true
 
-paginate: 7
-paginate_path: /posts/page:num
+paginate: 3
+paginate_path: /page:num
 
 defaults:
   - scope:
-      path: "_posts"
+      path: "" # an empty string here means all files in the project
+      type: "posts"
     values:
-      layout: "post"
-      permalink: /posts/:title/
+      is_post: true
 exclude: ["sitemap.xml", "feed.xml", "LICENSE", "README.md"]
 
