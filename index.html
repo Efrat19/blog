@@ -1,0 +1,59 @@
+---
+title: Blog
+---
+
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+  <main>
+
+    {% include header.html %} {% include bio.html %}
+    <section class="articles">
+      {% for post in paginator.posts %}
+      <article class="article">
+        <h2 class="article-title">
+          <a href="{{site.baseurl}}{{post.url}}"> {{post.title}} </a>
+        </h2>
+        <small class="date">{{post.date | date_to_string}}</small>
+        <div class="categories">
+          {% for c in post.categories %}
+
+          <a href="{{ " /categories/" | relative_url }}#{{ c }}" data-base-url="{{site.baseurl}}"
+            class="category">{{c}}</a>
+          {% endfor %}
+        </div>
+      </article>
+      {%endfor%}
+    </section>
+
+
+    <!-- Pagination links -->
+    <div class="pagination">
+      {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">
+        Previous
+      </a>
+      {% else %}
+      <span class="previous">Previous</span>
+      {% endif %}
+      <span class="page_number ">
+        Page: {{ paginator.page }} of {{ paginator.total_pages }}
+      </span>
+      {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+      {% else %}
+      <span class="next ">Next</span>
+      {% endif %}
+    </div>
+
+
+
+    {% include footer.html %}
+  </main>
+  {% include category-modal.html%}
+  {% include google-analytics.html %}
+</body>
+
+</html>
