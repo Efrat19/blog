@@ -21,8 +21,9 @@ collections:
   posts:
     output: true
 
-paginate: 3
+paginate: 5
 paginate_path: /page:num
+gem 'github-pages', '170', group: :jekyll_plugins
 
 defaults:
   - scope:
