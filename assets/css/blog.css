@@ -110,6 +110,7 @@ main {
   font-size: 0.8rem;
   color: magenta;
 }
+
 .articles .article .categories {
   display: flex;
   flex-direction: row;
@@ -206,4 +207,15 @@ main {
   padding: 0 0.8rem;
   line-height: 1.3rem;
   cursor: pointer;
+}
+
+.pagination {
+  display: block;
+  font-size: 1.2rem;
+  color: rgb(119, 6, 119);
+}
+.pagination a {
+  color: magenta;
+  cursor: pointer;
+  text-decoration: underline;
 }
