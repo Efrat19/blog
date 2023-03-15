@@ -2,12 +2,11 @@
 - add minio to the datashim post
 
 rewrite or ditch:
-- weave-cni 
+- weave-cni
 - k8s dns
 - fluxcd almost zero downtime
 
 ideas:
-- Deployments revealed
 - NAT cost saving initiatives for 2023
   - alterNAT
   - per az NAT
@@ -15,3 +14,8 @@ ideas:
 - flink + kraft
 - Scaling with headroom
 - prometheus relabeling
+
+blog name ideas:
+- kube-fever
+- kube-mania
+- kubephoric

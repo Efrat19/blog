@@ -20,7 +20,7 @@ title: Blog
         <div class="categories">
           {% for c in post.categories %}
 
-          <a href="{{ " /categories/" | relative_url }}#{{ c }}" data-base-url="{{site.baseurl}}"
+          <a href="{{site.baseurl}}/categories/#{{ c }}" data-base-url="{{site.baseurl}}"
             class="category">{{c}}</a>
           {% endfor %}
         </div>
