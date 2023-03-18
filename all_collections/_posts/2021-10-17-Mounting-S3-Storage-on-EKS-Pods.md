@@ -170,3 +170,7 @@ s3-storage               1.0P         0      1.0P   0% /tmp
 .....
 ```
 Its that simple... Good Luck & Follow for more :heart:
+
+## 3.2023 Update
+Hi again :wave:
+A few awesome readers reached out regarding this post lately, asking about features that might or might not be included in the datashim operator. Since writing this, I also got to work with another tool with a very active community called [MinIO](https://github.com/minio/minio). They also have an operator for mounting S3 storage over k8s, which you might want to [check out](https://min.io/docs/minio/kubernetes/upstream/index.html)

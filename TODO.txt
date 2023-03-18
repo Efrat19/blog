@@ -14,8 +14,3 @@ ideas:
 - flink + kraft
 - Scaling with headroom
 - prometheus relabeling
-
-blog name ideas:
-- kube-fever
-- kube-mania
-- kubephoric

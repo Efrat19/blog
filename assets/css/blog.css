@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,300;0,400;0,800;1,100;1,300;1,400;1,800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+.opensans {
+  font-family: "Open Sans", sans-serif;
+}
 
 :root {
   --gray-1: #3f3f3f;
@@ -9,6 +14,8 @@
   --gray-6: #111111;
   --white-1: #eeeeee;
   --white-2: #a9abb3;
+  --k8s-1: #326ce5;
+  --k8s-light-2: #84a6ef;
 }
 * {
   font-family: inherit;
@@ -24,12 +31,13 @@
 }
 html,
 body {
-  color: var(--white-2);
+  color: var(--white-1);
   background-color: var(--gray-6);
   font-family: "JetBrains Mono", monospace;
   line-height: 2rem;
-  background-color: var(--gray-5);
-  /* background-color: #326ce5; */
+  /* background-color: var(--gray-5); */ 
+   background-color: var(--k8s-1);
+
 }
 header {
   padding: 2rem 0 4rem 0;
@@ -39,6 +47,8 @@ header .site-title {
   font-weight: bolder;
   line-height: 110%;
   color: var(--white-1);
+  font-family: "Open Sans", sans-serif;
+
 }
 main {
   margin: 0 auto;
@@ -92,6 +102,8 @@ main {
 .articles .article {
   padding: 2rem;
   background: var(--gray-3);
+    /* background-color: #326ce5; */
+
   border-radius: 15px;
   transition: all 0.2s ease-in-out;
 }
@@ -109,7 +121,8 @@ main {
 .articles .article .date {
   display: block;
   font-size: 0.8rem;
-  color: magenta;
+  /* color: magenta; */
+  color: var(--k8s-light-2);
 }
 
 .articles .article .categories {
@@ -213,10 +226,12 @@ main {
 .pagination {
   display: block;
   font-size: 1.2rem;
-  color: rgb(119, 6, 119);
+  color: var(--white-1);
 }
 .pagination a {
-  color: magenta;
+  color: var(--gray-5);
+  font-weight: bolder;
+  font-size: 1.2rem;
   cursor: pointer;
   text-decoration: underline;
 }

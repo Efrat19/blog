@@ -9,6 +9,10 @@
   --gray-6: #111111;
   --white-1: #eeeeee;
   --white-2: #a9abb3;
+  --k8s-1: #326ce5;
+  --k8s-light-1: #5a89ea;
+  --k8s-light-2: #84a6ef;
+  --k8s-light-3: #c1d2f7;
 }
 * {
   font-family: inherit;
@@ -31,17 +35,19 @@ body {
   background-color: var(--gray-5);
 }
 .content a {
-  color: cyan;
-  border-bottom: 1px solid cyan;
+  color: var(--k8s-light-3);
+  border-bottom: 1px solid var(--k8s-light-3);
+  font-weight: bold;
+
 }
 header {
   padding: 2rem 0 4rem 0;
 }
 .site-title {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: bolder;
   line-height: 110%;
-  color: var(--white-1);
+  color: var(--k8s-light-1);
 }
 main {
   margin: 0 auto;
@@ -64,6 +70,7 @@ main {
 .article .date {
   display: block;
   font-size: 0.8rem;
+  color: var(--k8s-light-2);
 }
 .categories {
   display: flex;
